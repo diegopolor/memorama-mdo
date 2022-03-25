@@ -19,12 +19,12 @@ var apagado = {
 // Función para verificar si ya están todos los pares
 function func_memoria(memoria){
 	// cambiar este valor de acuerdo al número de pares
-	if (memoria == 4){
+	if (memoria == 6){
 		setTimeout(function() {
 			$('.retro.msn').hide().find('p').html('');
 			$('#final').show().find('p').html('¡Felicidades! encontraste los pares.');
 			reiniciar();
-		}, 1500);
+		}, 500);
 	}
 }
 
