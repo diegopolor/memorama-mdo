@@ -74,7 +74,7 @@ function parejas(){
 			// Ocultar mensaje de retroalimentación
 			setTimeout( function(){
 				$('.retro.msn').fadeOut();
-			}, 1500);
+			}, 30000);
 
 			++memoria;
 			func_memoria(memoria);
@@ -101,7 +101,7 @@ function parejas(){
 				// Ocultar mensaje de retroalimentación
 				$('.retro.msn').fadeOut();
 
-			}, 1000);
+			}, 30000);
 		}
 
 		// limpiar variables
