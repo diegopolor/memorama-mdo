@@ -4,14 +4,14 @@ var memoria = 0;
 var parUno = '';
 var parDos = '';
 var contador = 0;
-var segundero = 30;
+var segundero = 500;
 
 var encendido = {
 	'opacity':'1',
-	'cursor':'pointer'
+	'cursor':'pointer',
 };
 var apagado = {
-	'background':'#ffb76b',
+	'background':'transparent',
 	'opacity':'0.4',
 	'cursor':'inherit'
 };
@@ -43,7 +43,7 @@ function reiniciar(){
 	memoria = 0;
 	parDos = '';
 	parUno = '';
-	segundero = 30;
+	segundero = 500;
 
 	// desactivar las tarjetas
 	$(document).off("click", '.memoria article');
@@ -52,7 +52,7 @@ function reiniciar(){
 // Función de parejas
 function parejas(){
 	// 'voltear' las fichas (mostrar el texto y cambiar el fondo)
-	$(this).css({'background':'#ff7f04'}).find('span').css({'display':'block'});
+	$(this).css({'background':'transparent'}).find('span').css({'display':'block'});
 	// reconocer si es la primer tarjetas o la segunda
 	// Es la primera
 	if ( parUno === ''){
@@ -92,7 +92,7 @@ function parejas(){
 
 			setTimeout(function() {
 				// Ocultar mensaje de retroalimentación
-				$('.'+claseUno+', .'+claseDos).css({'background':'#ffb76b'}).find('span').css({'display':'none'});
+				$('.'+claseUno+', .'+claseDos).css({'background':'transparent'}).find('span').css({'display':'none'});
 
 				// limpiar variables
 				claseUno = '';
@@ -118,19 +118,7 @@ function crono(){
 	$('.memoria article').css(encendido);
 	$('.boton .init').hide();
 	$('.boton .reinit').show();
-	segundero = 30;
-	contador = setInterval( function() {
-		--segundero;
-		if (segundero >= 10){
-			$('.crono span').html(segundero);
-		} else {
-			$('.crono span').html('0'+segundero);
-		}
-		if (segundero === 0){
-			$('.retro.msn').stop().addClass('incorrecto').show().find('p').html('¡Se acabó el tiempo!');
-			reiniciar();
-		}
-	}, 1000);
+	500 = 30;
 }
 
 $(document).on("click", "#reiniciar", reiniciar);
