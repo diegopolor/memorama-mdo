@@ -19,7 +19,7 @@ html{overflow-y:scroll}
 .elmaguire::before{background-color:#072239}
 .elmaguire:active{background:#2ca0ca;color:#156785;box-shadow:inset 0 1px 0 #7fd2f1,inset 0 -1px 0 #156785;-webkit-box-shadow:inset 0 1px 0 #7fd2f1,inset 0 -1px 0 #156785}
 .controles{display: flex; flex-grow: calc(2); margin:20px auto;text-align:center}
-.memoria{text-align:center;}
+.memoria{text-align:center; margin-bottom: 10%;}
 .memoria article{ background:#84A215;box-shadow:rgba(0,0,0,0.8) 0 0 2px;cursor:inherit;display:inline-block;filter:none;height:10em;margin:1%;min-width:150px;opacity:.4;vertical-align:top;width:20%;}
 .memoria article span{margin: 25% 10%; text-align: center; display:none;font-size: 12px;  color: black;  width: 80%;}
 .retro{background:#b6dfed; border-bottom:2px solid #197199;border-top:2px solid #ff7f04;color:#197199;display:none;margin-top:2em;width:100%;}
