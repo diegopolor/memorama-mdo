@@ -35,6 +35,7 @@ function reiniciar(){
 	$('.boton .init').show();
 	$('.boton .reinit').hide();
 	$('.memoria article').css(apagado).find('span').css({'display':'none'});
+	$('.num').css({display : "block"});
 
 	// limpiar variables
 	claseDos = '';
@@ -50,7 +51,7 @@ function reiniciar(){
 }
 
 // Función de parejas
-function parejas(){
+async function parejas(){
 	// 'voltear' las fichas (mostrar el texto y cambiar el fondo)
 	$(this).css({'background':'transparent'}).find('span').css({'display':'block'});
 	// reconocer si es la primer tarjetas o la segunda
@@ -59,6 +60,7 @@ function parejas(){
 
 		parUno = $(this).attr('data-pareja');
 		claseUno = $(this).attr('class');
+		alert(claseUno)
 
 	// Es la segunda
 	} else {
@@ -72,7 +74,7 @@ function parejas(){
 			$('.retro.msn').stop().removeClass('incorrecto').show().find('p').html('¡Correcto!');
 
 			// Ocultar mensaje de retroalimentación
-			setTimeout( function(){
+			await setTimeout( function(){
 				$('.retro.msn').fadeOut();
 			}, 30000);
 
@@ -93,7 +95,6 @@ function parejas(){
 			setTimeout(function() {
 				// Ocultar mensaje de retroalimentación
 				$('.'+claseUno+', .'+claseDos).css({'background':'transparent'}).find('span').css({'display':'none'});
-
 				// limpiar variables
 				claseUno = '';
 				claseDos = '';
@@ -118,8 +119,11 @@ function crono(){
 	$('.memoria article').css(encendido);
 	$('.boton .init').hide();
 	$('.boton .reinit').show();
+
 	500 = 30;
 }
+
+
 
 $(document).on("click", "#reiniciar", reiniciar);
 $(document).on("click", "#iniciar", crono);

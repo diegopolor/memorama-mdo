@@ -25,3 +25,5 @@ html{overflow-y:scroll}
 .retro{background:#b6dfed; border-bottom:2px solid #197199;border-top:2px solid #ff7f04;color:#197199;display:none;margin-top:2em;width:100%;}
 .retro.incorrecto{background:#eaa6a6;border-bottom:2px solid #842222;border-top:2px solid #842222;color:#842222}
 .retro p{display:block;margin:.5em 0 .5em 1em;width:calc(100% - 2em)} 
+.num {color: white;}
+.space{margin-right: 15px;}
